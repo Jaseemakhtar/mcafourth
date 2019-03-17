@@ -1,0 +1,21 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.sb{
+    border: 1px solid #555555;
+}
+.db{
+    border: 1px dashed #555555;
+}
+.dotb{
+    border: 1px dotted #555555;
+}
+.padded{
+    padding: 1em;
+    background-color: #888888;
+    color: #eeeeee;
+}
+.colored{
+    background-color: #2494d4;
+    color: #dddddd;
+}
