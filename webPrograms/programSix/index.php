@@ -87,14 +87,13 @@
                 <td><input type="submit" name="btn_submit" value="Submit" /> </td>
                 <td><input type="submit" name="btn_search" value="Search" /></td>
             </tr>
-
-            <?php 
-                if($msg){echo '<h4>'. $msg . '</h4>';} 
-            ?>
         </table>
-        
-        
     </form>
+    <?php 
+        if($msg){
+            echo '<h4>'. $msg . '</h4>';
+        } 
+     ?>
     
 </body>
 </html>
