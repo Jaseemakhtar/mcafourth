@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rcu>
+    <student>
+        <name>Jaseemakhtar</name>
+        <usn>CA172003</usn>
+        <course>MCA</course>
+        <sem>IV</sem>
+    </student>
+    <student>
+        <name>Shubham</name>
+        <usn>CA172007</usn>
+        <course>MCA</course>
+        <sem>IV</sem>
+    </student>
+    <student>
+        <name>Salim</name>
+        <usn>CA172006</usn>
+        <course>MCA</course>
+        <sem>IV</sem>
+    </student>
+    <student>
+        <name>Vinayak</name>
+        <usn>CA172008</usn>
+        <course>MCA</course>
+        <sem>IV</sem>
+    </student>
+</rcu> 
