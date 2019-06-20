@@ -32,6 +32,12 @@
 <center>
     <h1>All Contacts</h1>
     <table border="1" style="width: 100%;">
+        <tr>
+            <th> ID</th>
+            <th> Name</th>
+            <th> Phone</th>
+            <th> Address</th>
+        </tr>
     <?php 
         for($i = 0; $i < count($contacts); $i++){ 
             echo '<tr>';

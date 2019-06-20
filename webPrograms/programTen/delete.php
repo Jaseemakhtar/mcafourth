@@ -1,6 +1,21 @@
 <?php 
     include('connection.php');
     $msg = '';
+    $dmsg = '';
+
+    if(isset($_POST['delete'])){
+        $ids = $_POST['ids'];
+        
+        foreach ($ids as $id){ 
+            $sql = "DELETE FROM programten.contacts WHERE id = $id";
+            if (mysqli_query($conn, $sql)) {
+                $dmsg =  "Record deleted successfully";
+            } else {
+                $dmsg = "Error deleting record: " . mysqli_error($conn);
+            }
+        }
+    }
+
     $sql = "SELECT * FROM programten.contacts";
     $result = mysqli_query($conn, $sql);
     $contacts = array();
@@ -11,16 +26,6 @@
         }
     }else{
         $msg =  "No records found.";
-    }
-
-
-    if(isset($_POST['delete'])){
-        $ids = $_POST['ids'];
-
-        foreach ($ids as $id){ 
-            echo $id."<br />";
-            
-        }
     }
     
     mysqli_close($conn);
@@ -43,6 +48,13 @@
     <h1>Delete Contacts</h1>
     <form method="POST" action="<?= $_SERVER['PHP_SELF'] ?>">
         <table border="1" style="width: 100%;">
+            <tr>
+                <th> .</th>
+                <th> ID</th>
+                <th> Name</th>
+                <th> Phone</th>
+                <th> Address</th>
+            </tr>
             <?php 
                 for($i = 0; $i < count($contacts); $i++){ 
                     echo '<tr>';
@@ -62,6 +74,7 @@
     </form>
 
     <p><?= $msg ?></p>
+    <p><?= $dmsg ?></p>
 </center>
 </body>
 </html>
